@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tumteklifler.css">
+    <title>teklifler</title>
+</head>
+<body>
+
+
+
+    <header>
+        <div class="navbar">
+          <div class="logo"><a href="anasayfa.html">K E T O D </a></div>
+          <ul class="links">
+            <li><a href="anasayfa.html">anasayfa</a></li>
+            <li><a href="nasilcalisir.html">nasıl çalışır?</a></li>
+            <li><a href="iletisim.html">iletişim</a></li>
+            <li><a href="kayitol.html">kayıt ol</a></li>
+          </ul>
+          <a href="girisyap.html" class="action_btn">giriş yap</a>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+        <div class="dropdown_menu">
+          <li><a href="anasayfa.html">anasayfa</a></li>
+          <li><a href="nasilcalisir.html">nasıl çalışır?</a></li>
+            <li><a href="iletisim.html">iletişim</a></li>
+            <li><a href="kayitol.html">kayıt ol</a></li>
+            <li><a href="girisyap.html" class="action_btn">giriş yap</a></li>
+        </div>
+      </header>
+      <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropdownMenu = document.querySelector('.dropdown_menu')
+      
+        toggleBtn.onclick = function(){
+          dropdownMenu.classList.toggle('open')
+          const isOpen = dropdownMenu.classList.contains('open')
+      
+          toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars"
+        }
+      </script>
+          
+
+
+
+
+
+    <div class="comment-session">
+        <div class="post-comment">
+            <div class="list">
+                <div class="user">
+                    <div class="user-image">
+                        <img src="images/img2.png" alt="image">
+                    </div>
+                    <div class="user-meta">
+                        <div class="name">rajkamal</div>
+                        <div class="day">10 gün önce</div>
+                    </div>
+                </div>
+                <div class="comment-post">Lorem ipsum dolor sit amet.</div>
+            </div>
+        </div>
+        <div class="comment-box">
+            <div class="user">
+                <div class="image">
+                    <img src="images/img5.png" alt="image">
+                    <div class="name">rajkamal</div>
+                </div>
+                <form action="" method="post">
+                    <!-- <textarea name="comment"  placeholder="message"></textarea> -->
+                <button class="comment-submit">teklif ver </button>
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

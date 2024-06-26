@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>kayıt ol</title>
+   <link rel="stylesheet" href="kayitol.css">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+   integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+          <div class="logo"><a href="anasayfa.html">K E T O D </a></div>
+          <ul class="links">
+            <li><a href="anasayfa.html">anasayfa</a></li>
+            <li><a href="nasilcalisir.html">nasıl çalışır?</a></li>
+            <li><a href="iletisim.html">iletişim</a></li>
+            <li><a href="kayitol.html">kayıt ol</a></li>
+          </ul>
+          <a href="girisyap.html" class="action_btn">giriş yap</a>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+        <div class="dropdown_menu">
+          <li><a href="anasayfa.html">anasayfa</a></li>
+          <li><a href="nasilcalisir.html">nasıl çalışır?</a></li>
+            <li><a href="iletisim.html">iletişim</a></li>
+            <li><a href="kayitol.html">kayıt ol</a></li>
+            <li><a href="girisyap.html" class="action_btn">giriş yap</a></li>
+        </div>
+      </header>
+      <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropdownMenu = document.querySelector('.dropdown_menu')
+      
+        toggleBtn.onclick = function(){
+          dropdownMenu.classList.toggle('open')
+          const isOpen = dropdownMenu.classList.contains('open')
+      
+          toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars"
+        }
+      </script>
+    <div class="container">
+        <div class="form-box">
+            <form action="" name="Formfill" onsubmit="return validation()">
+                <h2>kayıt ol</h2>
+                <p id="result"></p>
+                <div class="input-box">
+                    <i class='bx bx-user'></i>
+                    <input type="text" name="Username" placeholder="kullanıcı adı">
+                </div>
+                <div class="input-box">
+                    <i class='bx bx-envelope'></i>
+                    <input type="Email" name="Email" placeholder="e-posta">
+                </div>
+                <div class="input-box">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" name="Password" placeholder="şifre">
+                </div>
+                <div class="input-box">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" name="CPassword" placeholder="şifre tekrar">
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn" onclick="validation()" value="Register">
+                </div>
+                <div class="group">
+                    <span><a href="#">şifremi unuttum</a></span>
+                    <span><a href="girisyap.html">giriş yap</a></span>
+
+                </div>
+            </form>
+        </div>
+        <div class="popup" id="popup">
+            <ion-icon name="checkmark-outline"></ion-icon>
+            <h2>ketod ailesine hoş geldin!</h2>
+            <p>başarılı şekilde kayıt oldun. teşekkürler!</p>
+            <a href="girisyap.html"><button onclick="closeSlide()">OK</button></a>
+        </div>
+    </div>
+<script src="kayitol.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kullanici.css">
+    <title>profil</title>
+</head>
+<body>
+      <header>
+    <div class="navbar">
+      <div class="logo"><a href="anasayfa.html">K E T O D </a></div>
+      <ul class="links">
+        <li><a href="anasayfa.html">anasayfa</a></li>
+        <li><a href="nasilcalisir.html">nasıl çalışır?</a></li>
+        <li><a href="iletisim.html">iletişim</a></li>
+        <li><a href="tekliflerdetails.html">teklifler</a></li>
+      </ul>
+      <li><a href="kullanici.html" class="action_btn">profil</a></li>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+      <li><a href="anasayfa.html">anasayfa</a></li>
+      <li><a href="nasilcalisir.html">nasıl çalışır?</a></li>
+        <li><a href="iletisim.html">iletişim</a></li>
+        <li><a href="tekliflerdetails.html">teklifler</a></li>
+        <li><a href="kullanici.html" class="action_btn">profil</a></li>
+    </div>
+  </header>
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropdownMenu = document.querySelector('.dropdown_menu')
+  
+    toggleBtn.onclick = function(){
+      dropdownMenu.classList.toggle('open')
+      const isOpen = dropdownMenu.classList.contains('open')
+  
+      toggleBtnIcon.classList = isOpen
+      ? "fa-solid fa-xmark"
+      : "fa-solid fa-bars"
+    }
+  </script>
+  
+
+
+
+
+
+
+
+
+    <div class="header__wrapper">
+        <header></header>
+        <div class="cols__container">
+            <div class="left__col">
+                <div class="img__container">
+                    <img src="images/profilepic.jpg" alt="Neckles">
+                    <span></span>
+                </div>
+                <h2>kolyeci</h2>
+                <p>kıyafetlerimi değiş-tokuş ediyorum!</p>
+                <ul class="about">
+                    <li><span>4.073</span>takipçi</li>
+                    <li><span>5</span>takip</li>
+                    <li><span>2</span>ürün</li>
+                </ul>
+                <div class="content">
+                    <p>
+                        ürünler oldukça yeni, her türlü ürünü değiştirebiliriz.
+                    </p>
+                </div>
+            </div>
+           <div class="right__col">
+            <nav>
+                <button><a href="urunekle.html">ürün ekle</a></button>
+            </nav>
+            <div class="photos">
+                <a href="#"><img src="images/img1.png" alt="fotoğraf"></a>
+                <a href="#"><img src="images/img6.png" alt="fotoğraf"></a>
+            </div>
+           </div> 
+        </div>
+    </div>
+</body>
+</html>

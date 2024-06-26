@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="nasilcalisir.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="anasayfa.html">K E T O D </a></div>
+      <ul class="links">
+        <li><a href="anasayfa.html">anasayfa</a></li>
+        <li><a href="nasilcalisir.html">nasıl çalışır?</a></li>
+        <li><a href="iletisim.html">iletişim</a></li>
+        <li><a href="kayitol.html">kayıt ol</a></li>
+      </ul>
+      <a href="girisyap.html" class="action_btn">giriş yap</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+      <li><a href="anasayfa.html">anasayfa</a></li>
+      <li><a href="nasilcalisir.html">nasıl çalışır?</a></li>
+        <li><a href="iletisim.html">iletişim</a></li>
+        <li><a href="kayitol.html">kayıt ol</a></li>
+        <li><a href="girisyap.html" class="action_btn">giriş yap</a></li>
+    </div>
+  </header>
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropdownMenu = document.querySelector('.dropdown_menu')
+  
+    toggleBtn.onclick = function(){
+      dropdownMenu.classList.toggle('open')
+      const isOpen = dropdownMenu.classList.contains('open')
+  
+      toggleBtnIcon.classList = isOpen
+      ? "fa-solid fa-xmark"
+      : "fa-solid fa-bars"
+    }
+  </script>
+  
+  
+</body>
+</html>
